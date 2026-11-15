@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Nostra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="index.html#new-arrival">New Arrival</a></p>
+            <p class="navbar-link"><a href="index.html#most-wanted">Most Wanted</a></p>
+            <p class="navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Side Navbar (Mobile) -->
+    <div class="side-navbar" id="sideNavbar">
+        <p style="text-align: right;" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collections.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact Us</a></p>
+        </div>
+    </div>
+
+    <!-- Main Collections Layout -->
+    <div class="collections-layout">
+        <!-- Filter Sidebar -->
+        <aside class="filter-section">
+            <h3>Occasion</h3>
+            <div>
+                <label><input type="checkbox" class="filter-checkbox" value="summer"> Summer</label><br>
+                <label><input type="checkbox" class="filter-checkbox" value="party"> Party</label><br>
+                <label><input type="checkbox" class="filter-checkbox" value="beach"> Beach</label>
+            </div>
+
+            <h3>Colors</h3>
+            <div>
+                <label><input type="checkbox" class="filter-checkbox" value="red"> Red</label><br>
+                <label><input type="checkbox" class="filter-checkbox" value="blue"> Blue</label><br>
+                <label><input type="checkbox" class="filter-checkbox" value="white"> White</label><br>
+                <label><input type="checkbox" class="filter-checkbox" value="green"> Green</label>
+            </div>
+
+            <h3>Arrivals</h3>
+            <div>
+                <label><input type="checkbox" class="filter-checkbox" value="new"> New</label><br>
+                <label><input type="checkbox" class="filter-checkbox" value="old"> Old</label>
+            </div>
+        </aside>
+
+        <!-- Products & Search -->
+        <main class="products-section">
+            <form class="product-search" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Search products (e.g., Floral, Party, Shirt)...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+
+            <div class="collections-grid" id="productContainer">
+                <div class="collection-item" data-tags="summer,white,new">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400" alt="Floral Summer Shirt">
+                    <h4>Floral Summer Shirt</h4>
+                    <p>₹799</p>
+                </div>
+
+                <div class="collection-item" data-tags="summer,green,new">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400" alt="Green Breeze Tee">
+                    <h4>Green Breeze Tee</h4>
+                    <p>₹599</p>
+                </div>
+
+                <div class="collection-item" data-tags="party,red,old">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400" alt="Party Red Blazer">
+                    <h4>Party Red Blazer</h4>
+                    <p>₹1,499</p>
+                </div>
+
+                <div class="collection-item" data-tags="beach,blue,new">
+                    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400" alt="Beach Blue Shirt">
+                    <h4>Beach Blue Shirt</h4>
+                    <p>₹899</p>
+                </div>
+
+                <div class="collection-item" data-tags="party,white,old">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400" alt="Classic White Formal">
+                    <h4>Classic White Formal</h4>
+                    <p>₹999</p>
+                </div>
+
+                <div class="collection-item" data-tags="beach,red,new">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400" alt="Red Resort Wear">
+                    <h4>Red Resort Wear</h4>
+                    <p>₹749</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h2>Nostra</h2>
+            <p>The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interest</p>
+            <div class="footer-icon-container">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <p>@ 2026 Nostra.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
